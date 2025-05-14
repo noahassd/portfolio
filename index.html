@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta name="description" content="Portfolio de Noah Assedou, étudiant en ingénierie à l'ESILV, spécialisé en Data & Intelligence Artificielle. Découvrez ses projets, compétences et certifications.">
+    <meta charset="UTF-8">
+    <meta name="description" content="Portfolio de Noah Assedou, étudiant en ingénierie à l'ESILV, spécialisé en Data, Intelligence Artificielle, Machine Learning et Développement Web. Découvrez ses projets, compétences et certifications.">        
+    <title>Noah Assedou | ESILV Engineering Student</title>
+    <meta name="author" content="Noah Assedou">
+    <meta property="og:title" content="Portfolio de Noah Assedou | Étudiant en ingénierie">
+    <meta property="og:description" content="Découvrez les projets, compétences et certifications de Noah Assedou, étudiant en ingénierie spécialisé en Data et Intelligence Artificielle.">
+    <meta property="og:type" content="website">
+    <meta name="keywords" content="Noah Assedou, Portfolio, Étudiant en ingénierie, Data Science, Intelligence Artificielle, Machine Learning, Développement Web, ESILV, Projets, Compétences, Certifications">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" href="images/favicon2.png">
+<link rel="shortcut icon" href="images/favicon2.png" type="image/png">
+<link rel="apple-touch-icon" href="images/favicon2.png">
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+        }
+        
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 50%, rgba(0,0,0,0) 100%);
+        }
+        
+        .project-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.03);
+        }
+        
+        .skill-bar {
+            height: 4px;
+            background-color: #e5e7eb;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background-color: #000;
+            transition: width 1s ease-in-out;
+        }
+    </style>
+</head>
+<button id="scrollToTop" class="fixed bottom-4 right-4 bg-gray-500 text-white p-3 rounded-full shadow-lg hidden">
+  <i class="fas fa-arrow-up"></i>
+</button>
+<body class="bg-white text-gray-900 antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white bg-opacity-90 backdrop-blur-sm z-50 border-b border-gray-100">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#" class="text-xl font-semibold">Noah Assedou</a>
+        <!-- Menu Desktop -->
+        <div class="hidden md:flex space-x-8">
+            <a href="#about" class="text-sm font-medium hover:text-gray-600 transition">À propos</a>
+            <a href="#education" class="text-sm font-medium hover:text-gray-600 transition">Formation</a>
+            <a href="#projects" class="text-sm font-medium hover:text-gray-600 transition">Projets</a>
+            <a href="#skills" class="text-sm font-medium hover:text-gray-600 transition">Compétences</a>
+            <a href="#technologies" class="text-sm font-medium hover:text-gray-600 transition">Technologies</a>
+            <a href="#certifications" class="text-sm font-medium hover:text-gray-600 transition">Certifications</a>
+            <a href="#contact" class="text-sm font-medium hover:text-gray-600 transition">Contact</a>
+            <a href="images/noah_assedou_cv_photo.pdf" download class="text-sm font-medium hover:text-gray-600 transition">CV</a>
+        </div>
+        <!-- Bouton pour le menu mobile -->
+        <button id="menu-toggle" class="md:hidden">
+            <i class="fas fa-bars text-xl"></i>
+        </button>
+    </div>
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100">
+        <a href="#about" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">À propos</a>
+        <a href="#education" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Formation</a>
+        <a href="#projects" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Projets</a>
+        <a href="#skills" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Compétences</a>
+        <a href="#technologies" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Technologies</a>
+        <a href="#certifications" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Certifications</a>
+        <a href="#contact" class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">Contact</a>
+        <a href="images/noah_assedou_cv_photo.pdf" download class="block px-6 py-3 text-sm font-medium hover:bg-gray-100 transition">CV</a>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-12 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Noah Assedou</h1>
+                <h2 class="text-xl md:text-2xl text-gray-600 mb-8">Étudiant en ingénierie à l'ESILV<br>Spécialisé en Intelligence Artificielle</h2>
+                <div class="flex space-x-4">
+                    <a href="#projects" class="px-6 py-3 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">Voir mes projets</a>
+                    <a href="#contact" class="px-6 py-3 border border-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Me contacter</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gray-200 overflow-hidden border-4 border-white shadow-lg">
+                    <!-- Replace with your photo -->
+                    <img src="images/photo_noah_assedou.jpg" alt="Photo de Noah Assedou" class="w-full h-full object-cover">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">À propos de moi</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-8 md:mb-0 flex justify-center">
+                    <div class="w-48 h-48 rounded-full bg-gray-100 overflow-hidden border-4 border-white shadow-md">
+                        <!-- Replace with your photo -->
+                        <img src="images/photo_noah_assedou.jpg" alt="Photo de Noah Assedou" class="w-full h-full object-cover">
+
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <p class="text-lg text-gray-700 mb-6">
+                        Passionné par les technologies émergentes et l'innovation, je suis actuellement étudiant en M1 en école d'ingénieur à l'ESILV avec une spécialisation en Data et Intelligence Artificielle. Mon objectif est de développer des solutions intelligentes qui améliorent notre quotidien tout en respectant les principes éthiques.
+                    </p>
+                    <p class="text-lg text-gray-700 mb-6">
+                        En dehors de mes études, je m'intéresse à la photographie et aux nouvelles tendances technologiques. Je crois en l'importance d'une approche multidisciplinaire pour résoudre les problèmes complexes de notre époque.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://www.linkedin.com/in/noahassedou" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-linkedin-in text-gray-700"></i>
+        </a>
+        <a href="https://github.com/noahassd" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-github text-gray-700"></i>
+        </a>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-2"></div>
+
+    <!-- Education Section -->
+    <section id="education" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Mon parcours académique</h2>
+            
+            <div class="space-y-8">
+                <!-- ESILV -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-2xl text-gray-600"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">ESILV - École Supérieure d'Ingénieurs Léonard de Vinci</h3>
+                            <p class="text-gray-600 mb-2">Diplôme d'ingénieur en Data et Intelligence Artificielle</p>
+                            <p class="text-gray-500 text-sm">2021 - 2026 (prévisionnel)</p>
+                            <p class="mt-3 text-gray-700">
+                                Formation d'ingénieur généraliste avec spécialisation en Data & IA, couvrant les domaines du machine learning, deep learning, traitement du langage naturel et computer vision.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Previous education -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex flex-col md:flex-row">
+                        <div class="md:w-1/4 mb-4 md:mb-0">
+                            <div class="w-16 h-16 rounded-full bg-gray-100 flex items-center justify-center">
+                                <i class="fas fa-school text-2xl text-gray-600"></i>
+                            </div>
+                        </div>
+                        <div class="md:w-3/4">
+                            <h3 class="text-xl font-semibold mb-1">RTU - Riga Technical University</h3>
+                            <p class="text-gray-600 mb-2">Programme Erasmus - Mathématiques, Physique, Machine Learning</p>
+                            <p class="text-gray-500 text-sm">2023</p>
+                            <p class="mt-3 text-gray-700">
+                                Formation en Erasmus à RTU en Lettonie, avec un accent sur les mathématiques appliquées, la physique et le machine learning. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-2"></div>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Mes projets</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-project-diagram text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Système de recommandation</h3>
+                        <p class="text-gray-600 text-sm mb-4">Développement d'un algorithme de recommandation basé sur le traitement du langage naturel.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">NLP</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Machine Learning</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-black hover:text-gray-600 transition">Voir le projet →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-robot text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Chatbot intelligent</h3>
+                        <p class="text-gray-600 text-sm mb-4">Conception d'un chatbot utilisant des techniques avancées de compréhension du langage.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Transformers</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Flask</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-black hover:text-gray-600 transition">Voir le projet →</a>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card bg-white rounded-xl overflow-hidden border border-gray-100">
+                    <div class="h-48 bg-gray-100 flex items-center justify-center">
+                        <i class="fas fa-chart-line text-5xl text-gray-400"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="font-semibold text-lg mb-2">Analyse de données financières</h3>
+                        <p class="text-gray-600 text-sm mb-4">Application de modèles prédictifs pour l'analyse de tendances sur les marchés financiers.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Python</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Pandas</span>
+                            <span class="px-2 py-1 bg-gray-100 text-xs rounded-full">Time Series</span>
+                        </div>
+                        <a href="#" class="text-sm font-medium text-black hover:text-gray-600 transition">Voir le projet →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="https://github.com/noahassd" class="px-6 py-3 border border-black rounded-full text-sm font-medium hover:bg-gray-100 transition">Voir tous mes projets</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-2"></div>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold mb-12 text-center">Mes compétences</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-code mr-3 text-gray-600"></i> Techniques
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Python</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Machine Learning</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">SQL</span>
+                                <span class="text-sm text-gray-500">80%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">TensorFlow/PyTorch</span>
+                                <span class="text-sm text-gray-500">75%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h3 class="text-xl font-semibold mb-6 flex items-center">
+                        <i class="fas fa-comments mr-3 text-gray-600"></i> Transversales
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Travail d'équipe</span>
+                                <span class="text-sm text-gray-500">95%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Communication</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Gestion de projet</span>
+                                <span class="text-sm text-gray-500">85%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-1">
+                                <span class="text-sm font-medium">Résolution de problèmes</span>
+                                <span class="text-sm text-gray-500">90%</span>
+                            </div>
+                            <div class="skill-bar rounded-full">
+                                <div class="skill-progress rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="bg-white p-6 rounded-xl shadow-sm mt-8">
+                <h3 class="text-xl font-semibold mb-6 flex items-center">
+                    <i class="fas fa-language mr-3 text-gray-600"></i> Langues
+                </h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Français</span>
+                            <span class="text-sm text-gray-500">Langue maternelle</span>
+                        </div>
+                        <div class="skill-bar rounded-full">
+                            <div class="skill-progress rounded-full" style="width: 100%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Anglais</span>
+                            <span class="text-sm text-gray-500">Courant (TOEFL 607 B2+)</span>
+                        </div>
+                        <div class="skill-bar rounded-full">
+                            <div class="skill-progress rounded-full" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between mb-1">
+                            <span class="text-sm font-medium">Espagnol</span>
+                            <span class="text-sm text-gray-500">Intermédiaire</span>
+                        </div>
+                        <div class="skill-bar rounded-full">
+                            <div class="skill-progress rounded-full" style="width: 60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="section-divider my-2"></div>
+<section id="technologies" class="py-20 bg-white">
+
+    <div class="bg-white p-6 rounded-xl shadow-sm mt-8">
+    <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-3xl font-bold mb-12 text-center">
+            <i class="fas fa-laptop-code mr-3 text-gray-600"></i> Technologies et Langages
+        </h3>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+            <!-- Langages -->
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-python text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Python</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-js-square text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">JavaScript </span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-database text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">SQL / PL/SQL</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-html5 text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">HTML</span>
+            </div>
+           
+
+            <!-- AI / ML -->
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-brain text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Scikit-learn</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-brain text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">TensorFlow / Keras</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-brain text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">PyTorch</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-robot text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">OpenAI API</span>
+            </div>
+
+            <!-- Web / Backend -->
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-server text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Flask / FastAPI</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-react text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">React.js</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-node-js text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Node.js</span>
+            </div>
+
+            <!-- DevOps / DB -->
+            <div class="flex items-center space-x-3">
+                <i class="fab fa-docker text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Docker & Compose</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-code-branch text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Git / GitLab</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-cloud text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">Azure / Logic Apps</span>
+            </div>
+            <div class="flex items-center space-x-3">
+                <i class="fas fa-leaf text-2xl text-gray-600"></i>
+                <span class="text-sm font-medium">MongoDB / Neo4j </span>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    </section>
+
+<section id="certifications" class="py-16 bg-gray-50">
+  <div class="max-w-3xl mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-10">Certifications</h2>
+    
+    <div class="space-y-4">
+      <!-- Carte certification -->
+      <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800">Enablers - Agile methodology</h3>
+        <p class="text-sm text-gray-500">Méthodologie Agile · Obtenue en 2024</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800">TOEFL ITP – 607</h3>
+        <p class="text-sm text-gray-500">Certification d'anglais · Obtenue en 2023</p>
+      </div>
+
+      <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm hover:shadow-md transition">
+        <h3 class="text-lg font-semibold text-gray-800">Design Thinker</h3>
+        <p class="text-sm text-gray-500">Design Thinking · Obtenue en 2022</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <section id="contact" class="py-20 bg-white">
+  <div class="max-w-5xl mx-auto px-6">
+    <h2 class="text-3xl font-bold mb-12 text-center">Me contacter</h2>
+
+    <div class="flex flex-col md:flex-row md:space-x-12">
+      <!-- Colonne gauche -->
+      <div class="md:w-1/2 mb-12 md:mb-0">
+        <h3 class="text-xl font-semibold mb-4">Informations de contact</h3>
+        <p class="text-gray-700 mb-6">
+          Vous souhaitez discuter d'un projet, d'une opportunité ou simplement échanger sur l'IA ? N'hésitez pas à me contacter.
+        </p>
+
+        <div class="space-y-4">
+          <div class="flex items-center">
+            <i class="fas fa-envelope mr-4 text-gray-600"></i>
+            <span>noah.assedou@gmail.com</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-phone mr-4 text-gray-600"></i>
+            <span>+33 6 63 20 59 37</span>
+          </div>
+          <div class="flex items-center">
+            <i class="fas fa-map-marker-alt mr-4 text-gray-600"></i>
+            <span>Paris, France</span>
+          </div>
+        </div>
+
+        <div class="mt-8">
+          <h4 class="font-medium mb-4">Réseaux sociaux</h4>
+          <div class="flex items-center space-x-4">
+            <a href="https://www.linkedin.com/in/noahassedou" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+              <i class="fab fa-linkedin-in text-gray-700"></i>
+            </a>
+            <a href="https://github.com/noahassd" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+              <i class="fab fa-github text-gray-700"></i>
+            </a>
+            <a href="images/noah_assedou_cv_photo.pdf" download class="px-4 py-2 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition">
+              Télécharger mon CV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Colonne droite -->
+      <div class="md:w-1/2 flex flex-col items-center justify-center text-center">
+        <p class="text-lg text-gray-700 mb-6">
+          Vous pouvez aussi me contacter directement via e-mail ou LinkedIn pour discuter d'opportunités.
+        </p>
+        <div class="space-y-4">
+          <a href="mailto:noah.assedou@gmail.com" class="px-6 py-3 bg-black text-white rounded-full text-sm font-medium hover:bg-gray-800 transition block">
+            Envoyer un e-mail
+          </a>
+          <a href="https://www.linkedin.com/in/noahassedou" target="_blank" class="px-6 py-3 bg-blue-600 text-white rounded-full text-sm font-medium hover:bg-blue-700 transition block">
+            Me contacter sur LinkedIn
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 py-12 border-t border-gray-200">
+        <div class="max-w-6xl mx-auto px-6">
+<div class="flex flex-col items-center text-center space-y-4">
+                <div class="mb-6 md:mb-0">
+                    <a href="#" class="text-xl font-semibold">Noah Assedou</a>
+                    <p class="text-gray-600 mt-2">Étudiant en ingénierie spécialisé en Data et Intelligence Artificielle</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/noahassedou" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-linkedin-in text-gray-700"></i>
+        </a>
+        <a href="https://github.com/noahassd" target="_blank" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition">
+            <i class="fab fa-github text-gray-700"></i>
+        </a>
+        
+                </div>
+            </div>
+            <div class="mt-8 pt-8 border-t border-gray-200 text-center text-sm text-gray-500">
+                <p>© 2025 Noah Assedou. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const scrollToTopButton = document.getElementById('scrollToTop');
+
+        // Afficher ou masquer le bouton en fonction du scroll
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 200) {
+                scrollToTopButton.classList.remove('hidden');
+            } else {
+                scrollToTopButton.classList.add('hidden');
+            }
+        });
+
+        // Remonter en haut de la page lorsque le bouton est cliqué
+        scrollToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    });
+    document.addEventListener('DOMContentLoaded', function () {
+        // Animation des barres de compétences
+        const skillBars = document.querySelectorAll('.skill-progress');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const width = entry.target.style.width;
+                    entry.target.style.width = '0';
+                    setTimeout(() => {
+                        entry.target.style.width = width;
+                    }, 100);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        skillBars.forEach(bar => {
+            observer.observe(bar);
+        });
+
+        // Toggle menu mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuToggle.addEventListener('click', function () {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Smooth scroll pour les liens ancrés
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+                // Ferme le menu mobile après clic
+                if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+                    mobileMenu.classList.add('hidden');
+                }
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
